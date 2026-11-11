@@ -1,0 +1,10 @@
+project: savantenvs/shaka-packager
+target: fuzz_mp2t_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mp2t_parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mp2t_parser
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_mp2t_parser/fuzz_mp2t_parser.dict
+    timeout: 10

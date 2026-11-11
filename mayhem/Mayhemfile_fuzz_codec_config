@@ -1,0 +1,10 @@
+project: savantenvs/shaka-packager
+target: fuzz_codec_config
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_codec_config/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_codec_config
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_codec_config/fuzz_codec_config.dict
+    timeout: 10

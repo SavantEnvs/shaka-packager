@@ -1,0 +1,10 @@
+project: savantenvs/shaka-packager
+target: fuzz_wvm_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wvm_parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wvm_parser
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_wvm_parser/fuzz_wvm_parser.dict
+    timeout: 10

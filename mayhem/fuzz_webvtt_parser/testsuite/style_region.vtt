@@ -1,0 +1,13 @@
+WEBVTT
+X-TIMESTAMP-MAP=MPEGTS:900000,LOCAL:00:00:00.000
+
+STYLE
+::cue { color: red }
+
+REGION
+id:r1
+width:40%
+
+id1
+00:00:00.000 --> 00:00:01.000 region:r1 line:0
+<c.x>cue</c>
